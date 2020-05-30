@@ -43,20 +43,24 @@ body .bg-image {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: stretch;
     margin: auto;
 }
 .dashboard {
+    padding-top: 15vh;
     display: flex;
+    overflow-y: hidden;
     width: 100%;
+    flex-wrap: wrap;
     margin: auto;
     justify-content: flex-start;
 }
 .dashboard div {
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
     justify-content: space-around;
     align-items: center;
-    margin: auto;
+    margin: 20px auto;
     display: flex;
     font-weight: 300;
     font-size: 22px;
