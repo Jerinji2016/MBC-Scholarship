@@ -36,14 +36,6 @@ body {
     background-color: rgb(235, 218, 70);
 }
 
-/* slno of every Student record
-.slno {
-
-}
-Student name, ID of every Student record
-.user-details {
-
-} */
 
 /* Time div of every Student record */
 .time-details {
@@ -58,14 +50,6 @@ Student name, ID of every Student record
     height: 100px;
 }
 
-/* Total Marks Div of every Student record */
-/* .total-details {
-
-}
-Exam status of every Student record
-.exam-status {
-
-} */
 .status-circle {
     padding: 10px;
     border: 1px solid green;
