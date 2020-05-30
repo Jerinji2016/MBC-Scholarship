@@ -11,7 +11,7 @@
     echo $_SERVER['DOCUMENT ROOT'];
 
     if(!isset($row[0])) {
-        header('Location: '.$_SERVER['DOCUMENT ROOT'].'\\avjpj-mbc-se\\');
+        header('Location: '.$_SERVER['DOCUMENT ROOT'].'\\MBC-Scholarship\\');
     }
     // else
     //     echo "<script> console.log('Session check successfull') </script>";

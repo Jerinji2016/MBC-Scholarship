@@ -29,8 +29,8 @@
     $var_sql = "INSERT INTO ".$sub_table."(question, option1, option2, option3, option4, answer, difficulty, entered_by) VALUES (";
 
     $var_sql .= '"'.$question.'", ';
-    $var_sql .= '"'.$op2.'", ';
     $var_sql .= '"'.$op1.'", ';
+    $var_sql .= '"'.$op2.'", ';
     $var_sql .= '"'.$op3.'", ';
     $var_sql .= '"'.$op4.'", ';
     $var_sql .= '"'.$answer.'", ';
@@ -40,5 +40,8 @@
     $conn = mysql_query($var_sql);
 
     // echo $conn;
-    echo json_encode($conn);
+    $arr["conn"] = $conn;
+    $arr["var"] = $var_sql;
+    $arr["que"] = $question;
+    echo json_encode($arr);
 ?>

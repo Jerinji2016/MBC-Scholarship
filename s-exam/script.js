@@ -155,7 +155,7 @@ function fetchQuestion() {
     xhr.onreadystatechange = function() {
         if(xhr.readyState == 4 && xhr.status == 200) {
             arr = JSON.parse(xhr.responseText);
-            console.log(arr);
+            // console.log(arr);
             displayQuestion(arr);
         }
     }
@@ -175,8 +175,10 @@ function displayQuestion(arr) {
     op2.innerHTML = arr.option2;
     op3.innerHTML = arr.option3;
     op4.innerHTML = arr.option4;
-}
 
+    MathJax.typeset();
+}
+    
 function questionList(n) {
     const target = document.getElementById('question-list');
     for(let i=1; i<=n; i++) {

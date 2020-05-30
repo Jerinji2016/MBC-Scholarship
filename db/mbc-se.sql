@@ -1,23 +1,25 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
--- http://www.phpmyadmin.net
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 29, 2020 at 07:17 PM
--- Server version: 5.6.17
--- PHP Version: 5.5.12
+-- Host: sql306.epizy.com
+-- Generation Time: May 30, 2020 at 03:36 AM
+-- Server version: 5.6.47-87.0
+-- PHP Version: 7.2.22
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mbc-se`
+-- Database: `epiz_25401528_mbcse`
 --
 
 -- --------------------------------------------------------
@@ -26,13 +28,12 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin_details`
 --
 
-CREATE TABLE IF NOT EXISTS `admin_details` (
-  `sl_no` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `admin_details` (
+  `sl_no` int(11) NOT NULL,
   `username` varchar(20) NOT NULL,
   `user_id` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
-  PRIMARY KEY (`sl_no`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+  `password` varchar(20) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admin_details`
@@ -48,8 +49,8 @@ INSERT INTO `admin_details` (`sl_no`, `username`, `user_id`, `password`) VALUES
 -- Table structure for table `chemistry_questions`
 --
 
-CREATE TABLE IF NOT EXISTS `chemistry_questions` (
-  `sl_no` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `chemistry_questions` (
+  `sl_no` int(11) NOT NULL,
   `question` varchar(500) NOT NULL,
   `option1` varchar(50) NOT NULL,
   `option2` varchar(50) NOT NULL,
@@ -57,9 +58,8 @@ CREATE TABLE IF NOT EXISTS `chemistry_questions` (
   `option4` varchar(50) NOT NULL,
   `answer` varchar(10) NOT NULL,
   `difficulty` varchar(10) NOT NULL,
-  `entered_by` varchar(20) NOT NULL,
-  PRIMARY KEY (`sl_no`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
+  `entered_by` varchar(20) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `chemistry_questions`
@@ -72,7 +72,7 @@ INSERT INTO `chemistry_questions` (`sl_no`, `question`, `option1`, `option2`, `o
 (4, 'The metal used to recover copper from a solution of copper sulphate is', 'Na', 'Ag', 'Hg', 'Fe', 'd', 'average', 'Test_user'),
 (5, 'The number of d-electrons in Fe2  (Z = 26) is not equal to that of', 'p-electrons in Ne(Z = 10)', 's-electrons in Mg(Z = 12)', 'd-electrons in Fe(Z = 26)', 'p-electrons in CI(Z = 17)', 'd', 'average', 'Test_user'),
 (6, 'The metallurgical process in which a metal is obtained in a fused state is called', 'smelting', 'roasting', 'calcinations', 'froth floatation', 'a', 'average', 'Test_user'),
-(7, 'The gas present in the stratosphere which filters out some of the sun''s ultraviolet light and provides an effective shield against radiation damage to living things is', 'oxygen', 'helium', 'ozone', 'methane', 'b', 'average', 'Test_user'),
+(7, 'The gas present in the stratosphere which filters out some of the sun\'s ultraviolet light and provides an effective shield against radiation damage to living things is', 'oxygen', 'helium', 'ozone', 'methane', 'b', 'average', 'Test_user'),
 (8, 'The most commonly used bleaching agent is', 'carbon dioxide', 'alcohol', 'chlorine', 'sodium chlorine', 'c', 'hard', 'Test_user'),
 (9, 'The nucleus of a hydrogen atom consists of', '1 proton   2 neutron', '1 proton only', '1 neutron only', '1 electron only', 'a', 'hard', 'Test_user'),
 (10, 'The heat required to raise the temperature of body by 1 K is called', 'thermal capacity', 'specific heat', 'water equivalent', 'None of the above', 'b', 'hard', 'Test_user'),
@@ -103,8 +103,8 @@ INSERT INTO `chemistry_questions` (`sl_no`, `question`, `option1`, `option2`, `o
 -- Table structure for table `gk_questions`
 --
 
-CREATE TABLE IF NOT EXISTS `gk_questions` (
-  `sl_no` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `gk_questions` (
+  `sl_no` int(11) NOT NULL,
   `question` varchar(300) NOT NULL,
   `option1` varchar(50) NOT NULL,
   `option2` varchar(50) NOT NULL,
@@ -112,9 +112,8 @@ CREATE TABLE IF NOT EXISTS `gk_questions` (
   `option4` varchar(50) NOT NULL,
   `answer` varchar(10) NOT NULL,
   `difficulty` varchar(10) NOT NULL,
-  `entered_by` varchar(20) NOT NULL,
-  PRIMARY KEY (`sl_no`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
+  `entered_by` varchar(20) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gk_questions`
@@ -130,7 +129,7 @@ INSERT INTO `gk_questions` (`sl_no`, `question`, `option1`, `option2`, `option3`
 (7, 'In May 2019, India delivered a pair of Mi-24 attack helicopters to which country?', 'Bangladesh', 'Afghanistan', 'Nepal', 'Qatar', 'a', 'average', 'Test_user'),
 (8, 'Who is called the beacon of light of Asia?', 'Subhash Chandra Bose', 'Mahatma Gandhi', 'Jawaharlal Nehru', 'Aurobindo Ghosh', 'c', 'hard', 'Test_user'),
 (9, 'Bharat Ratna and Padma Vibhushan awards in India were instituted in the year', '1968', '1958', '1964', '1954', 'd', 'hard', 'Test_user'),
-(10, 'Name the player who won the ''Player of the Tournament'' award in ICC Cricket World Cup 2019', 'Kane Williamson', 'Rohit Sharma ', 'Shakib Al Hasan', 'Jaspreet Bumrah', 'b', 'hard', 'Test_user'),
+(10, 'Name the player who won the \'Player of the Tournament\' award in ICC Cricket World Cup 2019', 'Kane Williamson', 'Rohit Sharma ', 'Shakib Al Hasan', 'Jaspreet Bumrah', 'b', 'hard', 'Test_user'),
 (11, 'Which of the following personalities gave â€˜The Laws of Heredityâ€™?   ', 'G.J. Mendel', 'Robert Hook ', 'Charles Darwin', 'William Harvey', 'b', 'easy', 'Test_user'),
 (12, 'Name the person who was also known as Deshbandhu.  ', 'G.K. Gokhale', 'S. Radhakrishnan', 'Chittaranjan Das', 'Madan Mohan Malviya', 'c', 'easy', 'Test_user'),
 (13, 'Which of the following is NOT the language enshrined in the eighth schedule of the Indian Constitution, as the language of the state?', 'Kashmiri', 'Nepali', 'English', 'Konkani', 'c', 'easy', 'Test_user'),
@@ -158,8 +157,8 @@ INSERT INTO `gk_questions` (`sl_no`, `question`, `option1`, `option2`, `option3`
 -- Table structure for table `maths_questions`
 --
 
-CREATE TABLE IF NOT EXISTS `maths_questions` (
-  `sl_no` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `maths_questions` (
+  `sl_no` int(11) NOT NULL,
   `question` varchar(300) NOT NULL,
   `option1` varchar(50) NOT NULL,
   `option2` varchar(50) NOT NULL,
@@ -167,9 +166,8 @@ CREATE TABLE IF NOT EXISTS `maths_questions` (
   `option4` varchar(50) NOT NULL,
   `answer` varchar(10) NOT NULL,
   `difficulty` varchar(10) NOT NULL,
-  `entered_by` varchar(20) NOT NULL,
-  PRIMARY KEY (`sl_no`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=31 ;
+  `entered_by` varchar(20) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `maths_questions`
@@ -213,8 +211,8 @@ INSERT INTO `maths_questions` (`sl_no`, `question`, `option1`, `option2`, `optio
 -- Table structure for table `physics_questions`
 --
 
-CREATE TABLE IF NOT EXISTS `physics_questions` (
-  `sl_no` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `physics_questions` (
+  `sl_no` int(11) NOT NULL,
   `question` varchar(200) NOT NULL,
   `option1` varchar(50) NOT NULL,
   `option2` varchar(50) NOT NULL,
@@ -222,9 +220,8 @@ CREATE TABLE IF NOT EXISTS `physics_questions` (
   `option4` varchar(50) NOT NULL,
   `answer` varchar(10) NOT NULL,
   `difficulty` varchar(10) NOT NULL,
-  `entered_by` varchar(20) NOT NULL,
-  PRIMARY KEY (`sl_no`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
+  `entered_by` varchar(20) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `physics_questions`
@@ -269,51 +266,23 @@ INSERT INTO `physics_questions` (`sl_no`, `question`, `option1`, `option2`, `opt
 -- Table structure for table `student_details`
 --
 
-CREATE TABLE IF NOT EXISTS `student_details` (
-  `sl_no` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `student_details` (
+  `sl_no` int(11) NOT NULL,
   `name` varchar(20) NOT NULL,
-  `email` varchar(20) NOT NULL,
-  `phone` int(15) NOT NULL,
-  `approval_status` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`sl_no`),
-  UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=33 ;
+  `email` varchar(100) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `approval_status` int(11) NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student_details`
 --
 
 INSERT INTO `student_details` (`sl_no`, `name`, `email`, `phone`, `approval_status`) VALUES
-(1, 'subin', 'subin@gmail.com', 8776768, 1),
-(2, 'basit', 'basit@gmail.com', 2535233, 1),
-(3, 'adona', 'adona@gmail.com', 642432615, 1),
-(4, 'amal', 'amal@gmail.com', 9, 1),
-(5, 'angana', 'angana@gmail.com', 5, 1),
-(6, 'athira', 'athira@gmail.com', 4632, 1),
-(7, 'bera', 'bera@gmail.com', 4552, 1),
-(8, 'Charita', 'charita@gmail.com', 628522, 1),
-(9, 'chandu', 'chandu@gmail.com', 595211, 0),
-(10, 'dinah', 'dinah@gmail.com', 65621, 0),
-(11, 'divya', 'divya@gmail.com', 5454, 1),
-(12, 'dhivya', 'dhivya@gmail.com', 545222, 1),
-(13, 'dani', 'dani@gmail.com', 131313, 0),
-(14, 'debolina', 'debolina@gmail.com', 5218035, 0),
-(15, 'esther', 'ether@gmail.com', 521, 0),
-(16, 'jahan', 'jahan@gmail.com', 65255, 0),
-(17, 'jaashree', 'jayashreen@gmail.com', 6525544, 0),
-(18, 'Harsha', 'Harsha@gmail.com', 45233363, 0),
-(19, 'James', 'James@gmail.com', 253322, 0),
-(20, 'Kanishma', 'Kanishma@gmail.com', 97522, 0),
-(21, 'Lakshmi', 'lakshmip@gmail.com', 842563, 0),
-(22, 'lidiya', 'lidiya@gmail.com', 24154, 0),
-(23, 'liya', 'liya@gmail.com', 52663624, 0),
-(24, 'meena', 'meena@gmail.com', 952152, 0),
-(25, 'meet', 'meet@gmail.com', 144, 0),
-(26, 'minnu', 'minnu@gmail.com', 2562, 0),
-(27, 'merin', 'merin@gmail.com', 28563, 0),
-(28, 'manjunath', 'manjunath@gmail.com', 69522, 0),
-(30, 'mehek', 'mehek@gmail.com', 66333, 0),
-(31, 'mousumi', 'mousumi@gmail.com', 21552, 0);
+(37, 'Divya Merin Alex', 'divyamerinalex@gmail.com', '9544982304', 1),
+(36, 'jerin', 'jerinji2016@gmail.com', '7012788627', 1),
+(38, 'Deepu J', 'deepujacob02@gmail.com', '9495444766', 0),
+(40, 'Deepu J', 'deepujacob02@mbcpeermade.com', '1234567890', 0);
 
 -- --------------------------------------------------------
 
@@ -321,11 +290,11 @@ INSERT INTO `student_details` (`sl_no`, `name`, `email`, `phone`, `approval_stat
 -- Table structure for table `student_list`
 --
 
-CREATE TABLE IF NOT EXISTS `student_list` (
-  `sl_no` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `student_list` (
+  `sl_no` int(11) NOT NULL,
   `name` varchar(30) NOT NULL,
-  `phone` int(15) NOT NULL,
-  `user_id` varchar(20) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `user_id` varchar(100) NOT NULL,
   `password` varchar(20) NOT NULL,
   `time_physics` int(11) DEFAULT NULL,
   `time_chemistry` int(11) DEFAULT NULL,
@@ -335,31 +304,113 @@ CREATE TABLE IF NOT EXISTS `student_list` (
   `chemistry_marks` int(11) DEFAULT NULL,
   `maths_marks` int(11) DEFAULT NULL,
   `gk_marks` int(11) DEFAULT NULL,
-  `exam_status` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`sl_no`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+  `exam_status` int(11) NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student_list`
 --
 
 INSERT INTO `student_list` (`sl_no`, `name`, `phone`, `user_id`, `password`, `time_physics`, `time_chemistry`, `time_maths`, `time_gk`, `physics_marks`, `chemistry_marks`, `maths_marks`, `gk_marks`, `exam_status`) VALUES
-(1, 'test no 1', 65155453, 'test1', 'test1', 23, 43, 16, 24, 6, 5, 8, 4, 1),
-(2, 'test no 2', 655315431, 'test2', 'test2', 20, 26, 82, 76, 8, 9, 8, 6, 2),
-(3, 'test no 3', 688436, 'test3', 'test3', 72, 81, 76, 88, 7, 8, 9, 3, 2),
-(4, 'test no 4', 3253513, 'test4', 'test4', 76, 87, 65, 65, 8, 8, 9, 7, 1),
-(5, 'test no 5', 312352453, 'test5', 'test5', 63, 54, 76, 56, 7, 8, 6, 9, 2),
-(6, 'test no 6', 9765352, 'test6', 'test6', 10, 0, 0, 0, 1, 1, 0, 0, 1),
-(7, 'subin', 8776768, 'subin@gmail.com', 'ylQnhYSR', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(8, 'basit', 2535233, 'basit@gmail.com', 'rJ3x0MH9', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(9, 'amal', 9, 'amal@gmail.com', 'GCYBFApz', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(10, 'angana', 5, 'angana@gmail.com', 'QsJ0ihS2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(11, 'Charita', 628522, 'charita@gmail.com', 'QKCk0o2i', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(12, 'divya', 5454, 'divya@gmail.com', 'r7dngkRp', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(13, 'dhivya', 545222, 'dhivya@gmail.com', 'as5Z2l4F', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(14, 'adona', 642432615, 'adona@gmail.com', 'epG8CSkP', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(15, 'athira', 4632, 'athira@gmail.com', 'eb7YNqD2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0),
-(16, 'bera', 4552, 'bera@gmail.com', 'ns1Hz3O2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0);
+(1, 'test no 1', '65155453', 'test1', 'test1', 23, 43, 16, 24, 6, 5, 8, 4, 1),
+(2, 'test no 2', '655315431', 'test2', 'test2', 20, 26, 82, 76, 8, 9, 8, 6, 2),
+(3, 'test no 3', '688436', 'test3', 'test3', 72, 81, 76, 88, 7, 8, 9, 3, 2),
+(24, 'jerin', '7012788627', 'jerinji2016@gmail.com', 'l2r6vIP3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1),
+(23, 'Divya Merin Alex', '9544982304', 'divyamerinalex@gmail.com', 'UGRJspEo', 82, 20, 34, 15, 6, 1, 1, 2, 2);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin_details`
+--
+ALTER TABLE `admin_details`
+  ADD PRIMARY KEY (`sl_no`);
+
+--
+-- Indexes for table `chemistry_questions`
+--
+ALTER TABLE `chemistry_questions`
+  ADD PRIMARY KEY (`sl_no`);
+
+--
+-- Indexes for table `gk_questions`
+--
+ALTER TABLE `gk_questions`
+  ADD PRIMARY KEY (`sl_no`);
+
+--
+-- Indexes for table `maths_questions`
+--
+ALTER TABLE `maths_questions`
+  ADD PRIMARY KEY (`sl_no`);
+
+--
+-- Indexes for table `physics_questions`
+--
+ALTER TABLE `physics_questions`
+  ADD PRIMARY KEY (`sl_no`);
+
+--
+-- Indexes for table `student_details`
+--
+ALTER TABLE `student_details`
+  ADD PRIMARY KEY (`sl_no`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
+-- Indexes for table `student_list`
+--
+ALTER TABLE `student_list`
+  ADD PRIMARY KEY (`sl_no`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin_details`
+--
+ALTER TABLE `admin_details`
+  MODIFY `sl_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `chemistry_questions`
+--
+ALTER TABLE `chemistry_questions`
+  MODIFY `sl_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `gk_questions`
+--
+ALTER TABLE `gk_questions`
+  MODIFY `sl_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `maths_questions`
+--
+ALTER TABLE `maths_questions`
+  MODIFY `sl_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `physics_questions`
+--
+ALTER TABLE `physics_questions`
+  MODIFY `sl_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `student_details`
+--
+ALTER TABLE `student_details`
+  MODIFY `sl_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+
+--
+-- AUTO_INCREMENT for table `student_list`
+--
+ALTER TABLE `student_list`
+  MODIFY `sl_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
