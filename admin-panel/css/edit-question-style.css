@@ -216,3 +216,24 @@
     color: white;
     cursor: pointer;
 }
+
+.page-buttons {
+    width: 30% unset;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+.fd-button {
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border: 0;
+    background-color: yellowgreen;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .6s;
+}
+.fd-button:hover {
+    transform: scale(1.1);
+}
