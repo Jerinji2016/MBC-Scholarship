@@ -5,7 +5,7 @@
 
     $user_name = $_SESSION['user-name'];
     $user_id = $_SESSION['user-id'];
-    $ses_sql = mysql_query("SELECT user_id FROM student_list WHERE user_id='$user_id'");
+    $ses_sql = mysql_query("SELECT user_id FROM sch_student_list WHERE user_id='$user_id'");
     $row = mysql_fetch_array($ses_sql);
 
     echo $_SERVER['DOCUMENT ROOT'];
