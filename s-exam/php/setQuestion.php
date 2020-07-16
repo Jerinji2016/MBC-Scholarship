@@ -4,7 +4,7 @@
     $n = $_GET['n'];
     $topic = $_GET['topic'];
     $user = $_GET['user'];
-    $table = $topic."_questions";
+    $table = "sch_".$topic."_questions";
 
     //  Set Question difficulty theme #diffTheme
     $easy_question = 6; 

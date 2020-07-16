@@ -65,7 +65,7 @@
             console.log(notaneed[1]);
         </script> 
     <?php
-        $res = mysql_query("SELECT * FROM student_list WHERE exam_status>0");
+        $res = mysql_query("SELECT * FROM sch_student_list WHERE exam_status>0");
 
         while($row = mysql_fetch_assoc($res)) {
     ?>
@@ -103,13 +103,13 @@
                     <th>Name</th>
                     <th>User ID</th>
                     <th>Phone No.</th>
-                    <th>Physics Mark(20)</th>
-                    <th>Chemistry Marks(20)</th>
-                    <th>Maths Marks(20)</th>
+                    <th>Physics <br> Mark(20)</th>
+                    <th>Chemistry <br> Marks(20)</th>
+                    <th>Maths <br> Marks(20)</th>
                     <th>GK Marks(20)</th>
-                    <th>Total Marks(80)</th>
-                    <th>Each Subject Time</th>
-                    <th>Total Time</th>
+                    <th>Total <br> Marks(80)</th>
+                    <th>Each <br> Subject <br> Time</th>
+                    <th>Total <br> Time</th>
                 </tr>
             </thead>
             <tfoot>
@@ -117,13 +117,13 @@
                     <th>Name</th>
                     <th>User ID</th>
                     <th>Phone No.</th>
-                    <th>Physics Mark(20)</th>
-                    <th>Chemistry Marks(20)</th>
-                    <th>Maths Marks(20)</th>
+                    <th>Physics<br> Mark(20)</th>
+                    <th>Chemistry <br> Marks(20)</th>
+                    <th>Maths <br> Marks(20)</th>
                     <th>GK Marks(20)</th>
-                    <th>Total Marks(80)</th>
-                    <th>Each Subject Time</th>
-                    <th>Total Time</th>
+                    <th>Total <br> Marks(80)</th>
+                    <th>Each <br> Subject <br> Time</th>
+                    <th>Total <br> Time</th>
                 </tr>
             </tfoot>
         </table>

@@ -13,16 +13,16 @@
 
     switch($category) {
         case "physics" : 
-            $sub_table = "physics_questions";
+            $sub_table = "sch_physics_questions";
             break;
         case "chemistry":
-            $sub_table = "chemistry_questions"; 
+            $sub_table = "sch_chemistry_questions"; 
             break;
         case "maths": 
-            $sub_table = "maths_questions";
+            $sub_table = "sch_maths_questions";
             break;
         case "gk": 
-            $sub_table = "gk_questions";
+            $sub_table = "sch_gk_questions";
             break;
     }
     

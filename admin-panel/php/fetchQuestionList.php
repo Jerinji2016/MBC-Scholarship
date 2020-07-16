@@ -3,7 +3,7 @@
 
     $topic = $_GET['topic'];
     $difficulty = $_GET['difficulty'];
-    $table = $topic."_questions";
+    $table = "sch_".$topic."_questions";
 
     $fetch_list = "SELECT * FROM $table";
     if(isset($difficulty))

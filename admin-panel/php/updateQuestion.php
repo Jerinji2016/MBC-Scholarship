@@ -12,7 +12,7 @@
     $user = $_GET['user'];
     $topic = $_GET['topic'];
     
-    $table = $topic."_questions";
+    $table = "sch_".$topic."_questions";
 
     $var_sql = 'UPDATE '.$table.' SET ';
     $var_sql .= 'question="'.$question.'", ';
