@@ -1,5 +1,9 @@
 <?php
         error_reporting(0);
+
+        // $con=mysql_connect('localhost','root','');
+        // $db=mysql_select_db('mbc_se');
+
         $con=mysql_connect('localhost:3306','mbcadmin','peermade');
-        $db=mysql_select_db('mbc-mock');
+        $db=mysql_select_db('mbc_mock');
 ?>
