@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/user/public_html/MBC-Scholarship/
+    - export DEPLOYPATH=/home/ajfpipxwnzay/public_html/MBC-Scholarship/
     - /bin/cp -R images $DEPLOYPATH
