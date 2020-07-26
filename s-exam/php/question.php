@@ -6,16 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../style.css?v=6">
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
-    <title>Document</title>
+
+    <script>
+        MathJax = {
+            loader: {load: ['input/asciimath', 'output/chtml']}
+        }
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js">
+    </script>
+
+    <title>MBC | Scholarship Exam</title>
 </head>
 <body>
     <?php 
         include '../../dbConnect.php';
         include '../../session.php';
 
-        $update_status = mysql_query("UPDATE student_list SET exam_status=1 WHERE user_id='$user_id'");
+        $update_status = mysql_query("UPDATE sch_student_list SET exam_status=1 WHERE user_id='$user_id'");
     ?>
-    <script>
+    <script>    
         var user = "<?php echo $user_id; ?>"; 
     </script>
     <div id="timer" class="timer"></div>
@@ -61,6 +72,10 @@
             </div>  
         </div>
         
+        <div class="note-submit">
+            <b>Note:</b> Your answers are noted only when you click on <b>Submit</b>!
+        </div>
+
         <div id="submit">
             <input type="submit" value="Submit" onclick="findAns()">
             <input type="button" id='d-button' value="Next Category" onclick="nextTopic()" style="margin-left: 50px">

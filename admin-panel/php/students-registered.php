@@ -40,7 +40,7 @@
     var user = <?php include 'adminSession.php'; ?>[1];
 </script>
 <?php
-    $var_sql = mysql_query('SELECT * FROM student_details WHERE approval_status=0');
+    $var_sql = mysql_query('SELECT * FROM sch_student_details WHERE approval_status=0');
     $i=1;
     while($row = mysql_fetch_array($var_sql)) {
         $arr["slno"] = $i;

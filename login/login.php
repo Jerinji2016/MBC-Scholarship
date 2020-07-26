@@ -3,7 +3,7 @@
     $user = $_POST['username'];
     $pass = $_POST['password'];
 
-    $var_sql = "SELECT name, user_id, password, exam_status FROM student_list WHERE user_id='$user'";
+    $var_sql = "SELECT name, user_id, password, exam_status FROM sch_student_list WHERE user_id='$user'";
 
     $res = mysql_query($var_sql);
     $row = mysql_fetch_array($res);

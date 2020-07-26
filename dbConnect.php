@@ -1,10 +1,9 @@
 <?php
         error_reporting(0);
+
         // $con=mysql_connect('localhost','root','');
-        // $db=mysql_select_db('mbc-se');
+        // $db=mysql_select_db('mbc_se');
 
-        // Directly
-
-        $con=mysql_connect('sql306.epizy.com','epiz_25401528','LoROiktomH');
-        $db=mysql_select_db('epiz_25401528_mbcse');
+        $con=mysql_connect('localhost:3306','mbcadmin','peermade');
+        $db=mysql_select_db('mbc_mock');
 ?>

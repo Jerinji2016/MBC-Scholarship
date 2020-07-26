@@ -79,6 +79,7 @@
     display: flex;
     justify-content: center;
     padding : 10px 0px;
+    border-bottom: 1px solid white;
 }
 #float-edit-container {
     display: none;
@@ -104,7 +105,8 @@
 .modal {
     background-color: white;
     width: 500px;
-    height: 400px;
+    min-height: 400px;
+    max-height: 600px;
     position: fixed;
     z-index: 3;
     display: flex;
@@ -114,6 +116,12 @@
     padding: 20px;
     color: black !important;
     transition: .5s;
+}
+.field-edit input[type=text] {
+    margin: 3px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 3px;
 }
 /* Pop-in & Pop-out animations */
 @keyframes popIn {
@@ -208,4 +216,25 @@
     background-color: rgb(73, 106, 255);
     color: white;
     cursor: pointer;
+}
+
+.page-buttons {
+    width: 30% unset;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+.fd-button {
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border: 0;
+    background-color: yellowgreen;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .6s;
+}
+.fd-button:hover {
+    transform: scale(1.1);
 }

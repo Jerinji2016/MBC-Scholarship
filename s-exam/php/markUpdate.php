@@ -26,7 +26,7 @@
     $mathmark = mysql_fetch_array(mysql_query($math_sql))[0];
     $gkmark = mysql_fetch_array(mysql_query($gk_sql))[0];
 
-    $var_sql = "UPDATE student_list SET time_physics = $phytime,
+    $var_sql = "UPDATE sch_student_list SET time_physics = $phytime,
                         time_chemistry = $chemtime,
                         time_maths = $mathtime,
                         time_gk = $gktime,

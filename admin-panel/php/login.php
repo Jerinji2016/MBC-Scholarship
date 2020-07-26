@@ -4,7 +4,7 @@
 
     include '../../dbConnect.php';
 
-    $login_sql = mysql_query("SELECT * FROM admin_details WHERE user_id='$user'");
+    $login_sql = mysql_query("SELECT * FROM sch_admin_details WHERE user_id='$user'");
 
     if($row = mysql_fetch_array($login_sql)) {
         if($row[3] == $pass) {

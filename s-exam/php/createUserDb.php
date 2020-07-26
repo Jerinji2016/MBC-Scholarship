@@ -16,5 +16,4 @@
         
         // echo $var_sql;
     $conn = mysql_query($var_sql);
-    // echo $conn;
 ?>

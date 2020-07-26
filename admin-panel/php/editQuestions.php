@@ -1,3 +1,4 @@
+<!-- done -->
 <div id="ses-dets">
     <?php include 'adminSession.php' ?>
 </div>
@@ -78,6 +79,17 @@
             color: white;
         }
     </style>
+
+    <script>
+        MathJax = {
+            loader: {load: ['input/asciimath', 'output/chtml']}
+        }
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js">
+    </script>
+
 </head>
 <body>
     <div id="float-edit-container">
@@ -270,6 +282,7 @@
                 questionList.length = 0;
                 questionList = JSON.parse(xhr.responseText);
                 displayList();
+                MathJax.typeset();
             }
         }
         xhr.send(x);
@@ -377,11 +390,11 @@
 
             
         var x = "&id="+questionList[editQ].id;
-        x += "&question="+question;
-        x += "&option1="+option1;
-        x += "&option2="+option2;
-        x += "&option3="+option3;
-        x += "&option4="+option4;
+        x += "&question="+encodeURIComponent(question);
+        x += "&option1="+encodeURIComponent(option1);
+        x += "&option2="+encodeURIComponent(option2);
+        x += "&option3="+encodeURIComponent(option3);
+        x += "&option4="+encodeURIComponent(option4);
         x += "&answer="+answer;
         x += "&difficulty="+difficulty;
         x += "&user="+user;

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wait for It</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            overflow: hidden;
+            background-image: url('https://ak.picdn.net/shutterstock/videos/1008767984/thumb/1.jpg');
+        }
+
+        .heading {
+            height: 20vh;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .timer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 80vh;
+            font-family: 'Orbitron';
+            margin: auto;
+        }
+
+        .start-in {
+            font-size: 30px;
+        }
+
+        #time {
+            font-size: 3em;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var target = new Date();
+        target.setDate(22);
+        target.setHours(11);
+        target.setMinutes(0);
+        target.setSeconds(0);
+
+        var today = new Date();
+        var diff = Math.abs(Math.round((target.getTime() - today.getTime()) / 1000));
+
+        let d;
+        function repeatFun() {
+
+            // console.log(diff);
+            let s,m,h,d;
+
+            s=diff % 60;
+            m=Math.floor(diff/60)%60;
+            h=Math.floor(diff/(60*60))%24;
+            d=Math.floor(diff/(60*60*24))%60;
+
+            let str = `${h}Hr ${m}m ${s}s`;
+            str = d>0 ? `${d} Day : `+str : str;
+
+            document.getElementById('time').innerHTML = str;
+            diff--;
+        }
+
+        var repeat = setInterval(repeatFun, 1000);
+    </script>
+    <div class="heading">
+        <h1>The Exam will start on 22 July, 2020 From 11:00 AM</h1>
+    </div>
+    <div class="timer">
+        <div class="start-in">Starts In</div>
+        <span id="time">Timer</span>
+    </div>
+</body>
